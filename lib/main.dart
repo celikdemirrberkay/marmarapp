@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:marmama_app/core/theme/color/app_colors.dart';
-import 'package:marmama_app/feature/home/view/home_view.dart';
+import 'package:marmarapp/core/theme/color/app_colors.dart';
+import 'package:marmarapp/feature/home/view/home_view.dart';
 
 Future<void> main() async {
   runApp(const Marmarapp());
@@ -15,6 +15,7 @@ class Marmarapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Marmarapp',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
