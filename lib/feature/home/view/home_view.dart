@@ -1,8 +1,7 @@
 import 'package:dart_vader/dart_vader.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:marmarapp/core/extension/context_ext.dart';
-import '../../../core/theme/color/app_colors.dart';
+import 'package:marmarapp/core/theme/color/app_colors.dart';
 
 part '../widgets/events_container.dart';
 
@@ -41,11 +40,29 @@ class _HomeViewState extends State<HomeView> {
     return Row(
       children: [
         context.spacerWithFlex(flex: 5),
-        const Expanded(flex: 30, child: _EventsContainer()),
+        const Expanded(
+          flex: 30,
+          child: _EventsContainer(
+            universityName: 'Yıldız Teknik',
+            universityAssetPath: 'assets/home/ytu.jpeg',
+          ),
+        ),
         context.spacerWithFlex(flex: 5),
-        const Expanded(flex: 30, child: _EventsContainer()),
+        const Expanded(
+          flex: 30,
+          child: _EventsContainer(
+            universityName: 'Marmara',
+            universityAssetPath: 'assets/home/marmara.jpeg',
+          ),
+        ),
         context.spacerWithFlex(flex: 5),
-        const Expanded(flex: 30, child: _EventsContainer()),
+        const Expanded(
+          flex: 30,
+          child: _EventsContainer(
+            universityName: 'Koç',
+            universityAssetPath: 'assets/home/koc.jpeg',
+          ),
+        ),
         context.spacerWithFlex(flex: 5),
       ],
     );
